@@ -1,4 +1,3 @@
-
 .home-screenshots {
 	display: flex;
 	flex-direction: column;
@@ -8,27 +7,37 @@
 		margin: 0 0 1em 1em;
 		box-shadow: 2px 2px 8px 0px #888888;
 	}
-}
-@media (max-width: 949px) {
-	.home-screenshots {
+	@media (max-width: 949px) {
 		display: none;
 	}
 }
 
-.content {
+#home-landing {
+	margin: 50px !important;
+	text-align: center;
+	h1 {
+		border-bottom: 0px;
+	}
 	.download-button {
-		display: inline-block;
-		background-color: #4CAF50;
+		background-color: hsl-lightness($green, 50%);
+		border-radius: 15px;
+		box-shadow: 0 5px hsl-lightness($green, 40%);
 		color: white;
+		cursor: pointer;
+		display: inline-block;
 		font-size: 20px;
 		line-height: 20px;
+		margin-top: 20px;
 		padding: 20px;
-		border-radius: 15px;
-		cursor: pointer;
 		text-align: center;
 		text-decoration: none;
+		transition: .1s background-color, .2s box-shadow, .2s transform;
+		&:active {
+			box-shadow: 0 0 hsl-lightness($green, 40%);
+			transform: translateY(5px);
+		}
 		&:hover {
-			background-color: #0C9F10;
+			background-color: hsl-lightness($green, 45%);
 		}
 	}
 }
