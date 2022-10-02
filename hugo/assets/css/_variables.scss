@@ -1,0 +1,10 @@
+@use "sass:color";
+
+$green: hsl(120, 40%, 40%);
+
+@function hsl-lightness($color, $lightness) {
+	$hue: hue($color);
+	$saturation: saturation($color);
+    $secondary-hsl: hsl($hue, $saturation, $lightness);
+    @return $secondary-hsl;
+}
